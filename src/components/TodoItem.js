@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { decl } from 'bem-react-core';
 import PropTypes from 'prop-types';
 import TodoTextInput from './TodoTextInput';
@@ -15,6 +15,7 @@ export default decl({
     },
 
     handleDoubleClick() {
+        console.log('handleDoubleClick')
         this.setState({ editing: true });
     },
 
@@ -32,11 +33,12 @@ export default decl({
     mods({ todo }) {
         return {
             completed: todo.completed,
-            editing: todo.editing,
+            editing: this.state.editing,
         }
     },
 
     content({ todo, completeTodo, deleteTodo }) {
+        console.log(this.state.editing)
         if (this.state.editing) {
             return (
                 <TodoTextInput text={todo.text}
