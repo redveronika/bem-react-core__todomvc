@@ -1,8 +1,9 @@
 import React from 'react';
-import { decl } from 'bem-react-core';
+import Bem, { decl } from 'bem-react-core';
 import PropTypes from 'prop-types';
 import Toggle from 'e:Toggle';
 import Label from 'e:Label';
+import Destroy from 'e:Destroy';
 
 import "m:editing";
 
@@ -42,15 +43,14 @@ export default decl({
 
     content({ todo, completeTodo, deleteTodo }) {
         return (
-            <div className="view">
+            <Bem elem="View">
                 <Toggle checked={todo.completed}
                         onChange={() => completeTodo(todo.id)} />
                 <Label onDoubleClick={this.handleDoubleClick}>
                     {todo.text}
                 </Label>
-                <button className="destroy"
-                        onClick={() => deleteTodo(todo.id)} />
-            </div>
+                <Destroy onClick={() => deleteTodo(todo.id)} />
+            </Bem>
         );
     }
 
