@@ -5,7 +5,6 @@
   "devDependencies": {
     "enzyme": "^2.8.2",
     "react-addons-test-utils": "^15.5.1",
-    "react-scripts": "^1.0.2",
     "bem-react-scripts": "^0.2.2"
   },
   "dependencies": {
