@@ -8,19 +8,6 @@
     border-bottom: none;
 }
 
-.TodoItem label {
-    word-break: break-all;
-    padding: 15px 15px 15px 60px;
-    display: block;
-    line-height: 1.2;
-    transition: color 0.4s;
-}
-
-.TodoItem.completed label {
-    color: #d9d9d9;
-    text-decoration: line-through;
-}
-
 .TodoItem .destroy {
     display: none;
     position: absolute;

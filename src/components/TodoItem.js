@@ -2,6 +2,7 @@ import React from 'react';
 import { decl } from 'bem-react-core';
 import PropTypes from 'prop-types';
 import Toggle from 'e:Toggle';
+import Label from 'e:Label';
 
 import "m:editing";
 
@@ -44,9 +45,9 @@ export default decl({
             <div className="view">
                 <Toggle checked={todo.completed}
                         onChange={() => completeTodo(todo.id)} />
-                <label onDoubleClick={this.handleDoubleClick}>
+                <Label onDoubleClick={this.handleDoubleClick}>
                     {todo.text}
-                </label>
+                </Label>
                 <button className="destroy"
                         onClick={() => deleteTodo(todo.id)} />
             </div>
