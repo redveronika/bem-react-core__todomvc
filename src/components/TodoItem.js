@@ -1,7 +1,9 @@
 import React from 'react';
 import { decl } from 'bem-react-core';
 import PropTypes from 'prop-types';
-import TodoTextInput from './TodoTextInput';
+import Toggle from 'e:Toggle';
+
+import "m:editing";
 
 export default decl({
     block: 'TodoItem',
@@ -38,28 +40,17 @@ export default decl({
     },
 
     content({ todo, completeTodo, deleteTodo }) {
-        console.log(this.state.editing)
-        if (this.state.editing) {
-            return (
-                <TodoTextInput text={todo.text}
-                               editing={this.state.editing}
-                               onSave={(text) => this.handleSave(todo.id, text)} />
-            );
-        } else {
-            return (
-                <div className="view">
-                    <input className="toggle"
-                           type="checkbox"
-                           checked={todo.completed}
-                           onChange={() => completeTodo(todo.id)} />
-                    <label onDoubleClick={this.handleDoubleClick}>
-                        {todo.text}
-                    </label>
-                    <button className="destroy"
-                            onClick={() => deleteTodo(todo.id)} />
-                </div>
-            );
-        }
+        return (
+            <div className="view">
+                <Toggle checked={todo.completed}
+                        onChange={() => completeTodo(todo.id)} />
+                <label onDoubleClick={this.handleDoubleClick}>
+                    {todo.text}
+                </label>
+                <button className="destroy"
+                        onClick={() => deleteTodo(todo.id)} />
+            </div>
+        );
     }
 
 }, {

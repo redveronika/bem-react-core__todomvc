@@ -1,0 +1,19 @@
+.TodoItem.TodoItem_editing {
+    border-bottom: none;
+    padding: 0;
+}
+
+.TodoItem.TodoItem_editing .edit {
+    display: block;
+    width: 506px;
+    padding: 12px 16px;
+    margin: 0 0 0 43px;
+}
+
+.TodoItem.TodoItem_editing .view {
+    display: none;
+}
+
+.TodoItem.TodoItem_editing:last-child {
+    margin-bottom: -1px;
+}
