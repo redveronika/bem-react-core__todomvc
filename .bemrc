@@ -1,12 +1,12 @@
 {
   "root": true,
-  "levels": {
-    "src/components": {"scheme": "flat", "naming": "react"},
-    "src/containers": {"scheme": "flat", "naming": "react"},
-    "src/aria": {"scheme": "flat", "naming": "react"}
-  },
+  "levels": [
+    {"path": "src/components", "scheme": "flat", "naming": "react"},
+    {"path": "src/containers", "scheme": "flat", "naming": "react"},
+    {"path": "src/aria", "scheme": "flat", "naming": "react"}
+  ],
   "modules": {
-    "create-bem-react-core": {
+    "create-bem-react-app": {
       "appPath": ".",
       "appBuild": "build",
       "appPublic": "public",
