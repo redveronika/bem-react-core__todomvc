@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { decl } from 'bem-react-core';
 
 export default decl({
@@ -9,7 +10,7 @@ export default decl({
         }
     }
 }, {
-    childContextTypesontextTypes: {
+    childContextTypes: {
         todoItemId: PropTypes.string,
     },
 });
