@@ -43,7 +43,7 @@ export default decl({
 
     content({ todo, completeTodo, deleteTodo }) {
         return (
-            <Bem elem="View">
+            <Bem block="TodoItem" elem="View">
                 <Toggle checked={todo.completed}
                         onChange={() => completeTodo(todo.id)} />
                 <Label onDoubleClick={this.handleDoubleClick}>

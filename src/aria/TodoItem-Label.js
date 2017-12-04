@@ -5,15 +5,15 @@ export default decl({
     block: 'TodoItem',
     elem: 'Label',
 
-    tag: 'label',
-
-    attrs({ onClick }) {
+    attrs() {
         return {
-            onClick
+            ...this.__base(...arguments),
+            role: 'presentation',
+            id: this.context.todoItemId
         }
     }
 }, {
-    propTypes: {
-        onClick: PropTypes.func,
+    contextTypes: {
+        todoItemId: PropTypes.string,
     },
 });
